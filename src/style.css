@@ -3,10 +3,12 @@
 }
 
 :root {
-    --primary-color: #36622B;
-    --background-color: #A97555;
-    --text-color: #61B136;
-    --accent-color: #FCED25;
+    --text-color: #E84A5F;
+    --background-color: #C9DBB2;
+    --primary-color: #F6FFDE;
+    --accent-color: #AAC8A7;
+    --ul-color: #889E81;
+    --li-color: #D24545;
 }
 
 
@@ -22,6 +24,7 @@ body {
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;
+    background-attachment: fixed;
     overflow-x: hidden; /* We'll have to use x since the axis has been reversed by body's flex direction*/
 }
 
@@ -56,7 +59,7 @@ body {
 
 
 #header > #navPanel {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
     margin-right: 50px;
     gap: 10px;
@@ -64,29 +67,54 @@ body {
 
 #navPanel > button {
     padding: 10px 15px;
-    border: 1px solid brown;
+    /* border: 1px solid brown; */
 }
 
 #content {
     background-color: aliceblue;
     width: 70%;
     height: auto;
-    margin-top: 20px;
+    margin: 20px 0;
     padding: 20px;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    border-radius: 20px;
+    box-shadow: -10px 15px 1px var(--accent-color);
 }
 
 #content.home {
-    border: 1px solid brown;
-    color: red;
     width: 500px;
     height: auto;
     align-self: flex-start;
     margin-left: 50px;
 }
 
-#content.menu ul {
+#content.menu {
+    width: 1000px;
+    height: auto;
+}
+
+#content.menu > ul {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+    list-style: none;
+}
+
+/* #content.menu .menu-category {
+    border: 1px solid green;
+} */
+
+#content.menu .menu-category ul {
+    color: var(--li-color);
+    margin-top: 20px;
+}
+
+#content.menu .menu-category ul > li {
+    /* border: 1px solid red; */
+    margin-bottom: 5px;
 }
 
 #footer {
