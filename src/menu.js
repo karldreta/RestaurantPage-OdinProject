@@ -1,6 +1,8 @@
 export default function renderMenu() {
     const main = document.querySelector('#content');
-    main.innerHTML = ''; 
+    main.innerHTML = '';
+    main.className = '';
+    main.classList.add('menu');
     main.innerHTML = `
     <h1 class="heading">Our Menu</h1>
     <p class="menu-description">Explore our delicious offerings at Sophia's Station Cafe:</p>

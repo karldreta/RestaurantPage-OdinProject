@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #36622B;
+    --background-color: #A97555;
+    --text-color: #61B136;
+    --accent-color: #FCED25;
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    background-image: url('./imgs/background.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    overflow-x: hidden; /* We'll have to use x since the axis has been reversed by body's flex direction*/
+}
+
+#header {
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
+}
+
+.logoContainer > img {
+    width: 70px;
+    height: auto;
+    padding: 10px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.logoContainer{
+    border: 10px solid var(--accent-color);
+    border-radius: 50%;
+    height: auto;
+    margin-left: 50px;
+    align-items: center;
+  }
+
+
+#header > #navPanel {
+    border: 1px solid blue;
+    display: flex;
+    margin-right: 50px;
+    gap: 10px;
+}
+
+#navPanel > button {
+    padding: 10px 15px;
+    border: 1px solid brown;
+}
+
+#content {
+    background-color: aliceblue;
+    width: 70%;
+    height: auto;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+#content.home {
+    border: 1px solid brown;
+    color: red;
+    width: 500px;
+    height: auto;
+    align-self: flex-start;
+    margin-left: 50px;
+}
+
+#content.menu ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#footer {
+    background-color: aqua;
+    width: 100%;
+}

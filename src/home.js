@@ -1,6 +1,8 @@
 export default function renderHome() {
     const main = document.querySelector('#content');
     main.innerHTML = '';
+    main.className = ''; // Remove all existing classes
+    main.classList.add('home');
     // We'll use template literals here for efficient code writing.
     main.innerHTML = `
     <h1 class="heading">Sophia's Station Cafe</h1>

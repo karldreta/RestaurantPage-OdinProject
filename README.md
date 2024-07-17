@@ -16,3 +16,8 @@ This is an Odin Project: Restaurant Page
 
 * Modularize the code base using [ES6 Modules](https://www.theodinproject.com/lessons/node-path-javascript-es6-modules)
 
+## References:
+
+https://www.flaticon.com/search?word=s
+
+https://www.createursdinterieur.com/realisations/architecture-tertiaire/creation-coworking-space/
