@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Regular.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lobster';
+    src: url('./fonts/Lobster-Regular.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 * {
     box-sizing: border-box;
 }
@@ -10,7 +25,6 @@
     --ul-color: #889E81;
     --li-color: #D24545;
 }
-
 
 body {
     width: 100vw;
@@ -26,6 +40,28 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow-x: hidden; /* We'll have to use x since the axis has been reversed by body's flex direction*/
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    margin: 0;
+    padding: 0 0 20px 0;
+    letter-spacing: 4px;
+}
+
+h2 {
+    font-family: 'Lobster', cursive;
+    margin: 0;
+    padding: 0 0 5px 0;
+    letter-spacing: 3px;
+}
+
+p {
+    font-family: 'Roboto';
+    margin: 0 0 20px 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 22px;
 }
 
 #header {
@@ -57,17 +93,39 @@ body {
     align-items: center;
   }
 
+#header > .cafeName {
+    color: var(--text-color);
+    padding: 0;
+    justify-self: left;
+    margin-right: 500px;
+}
 
 #header > #navPanel {
     /* border: 1px solid blue; */
     display: flex;
     margin-right: 50px;
-    gap: 10px;
+    height: 125%;
+    width: 300px;
 }
 
 #navPanel > button {
     padding: 10px 15px;
-    /* border: 1px solid brown; */
+    border: none;
+    color: var(--text-color);
+    background-color: transparent;
+    font-size: 14px;
+    height: 100%;
+    width: 75px;
+    text-align: center;
+}
+
+#navPanel > button:hover {
+    background-color: var(--background-color);
+    cursor: pointer;
+}
+
+#navPanel > button:active {
+    opacity: .5;
 }
 
 #content {
@@ -75,11 +133,12 @@ body {
     width: 70%;
     height: auto;
     margin: 20px 0;
-    padding: 20px;
+    padding: 30px;
     color: var(--text-color);
-    background-color: var(--background-color);
+    background-color: var(--primary-color);
     border-radius: 20px;
     box-shadow: -10px 15px 1px var(--accent-color);
+    text-align: justify;
 }
 
 #content.home {
@@ -90,8 +149,9 @@ body {
 }
 
 #content.menu {
-    width: 1000px;
+    width: 900px;
     height: auto;
+    margin-bottom: 30px;
 }
 
 #content.menu > ul {
@@ -103,10 +163,6 @@ body {
     list-style: none;
 }
 
-/* #content.menu .menu-category {
-    border: 1px solid green;
-} */
-
 #content.menu .menu-category ul {
     color: var(--li-color);
     margin-top: 20px;
@@ -117,7 +173,27 @@ body {
     margin-bottom: 5px;
 }
 
+#content.contact {
+    width: 500px;
+    height: auto;
+    align-self: flex-end;
+    margin-right: 50px;
+}
+
+#content.about {
+    width: 700px;
+}
+
 #footer {
-    background-color: aqua;
+    background-color: var(--primary-color);
     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#footer p {
+    margin: 10px 0;
+    color: var(--text-color);
+    font-family: 'Lobster';
+    letter-spacing: 2px;
 }

@@ -3,7 +3,7 @@ import renderHome from './home';
 import renderMenu from './menu';
 import renderContact from './contact';
 import renderAbout from './about';
-import sIconPath from './imgs/sIcon.png';
+import iconPath from './imgs/icon.png';
 
 document.addEventListener("DOMContentLoaded", function () {
     renderHome(); // Load the HomePage first
@@ -12,16 +12,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const navPanel = document.querySelector('#navPanel');
     const logoContainer = document.createElement('div');
     logoContainer.classList.add("logoContainer");
-    const sIcon = new Image();
-    sIcon.src = sIconPath;
-    logoContainer.appendChild(sIcon)
+    const logoIcon = new Image();
+    logoIcon.src = iconPath;
+    logoContainer.appendChild(logoIcon)
     header.insertBefore(logoContainer, navPanel);
+
+    const cafeName = document.createElement('h1')
+    cafeName.classList.add('cafeName');
+    cafeName.textContent = "Sophia's Station Cafe";
+    header.insertBefore(cafeName, navPanel);
 
     // Footer
     const footer = document.createElement('footer');
     footer.setAttribute('id', 'footer');
     footer.innerHTML = `
-        <p>I'm the Footer</p>
+        <p>Welcome to our cozy cafe. Enjoy your stay!</p>
     `;
     document.body.appendChild(footer);
 
