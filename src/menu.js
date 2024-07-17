@@ -1,5 +1,12 @@
 export default function renderMenu() {
     const main = document.querySelector('#content');
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        button.classList.remove('toggled');
+    });
+    const Btn = document.querySelector('#menu');
+    Btn.classList.add('toggled');
+    
     main.innerHTML = '';
     main.className = '';
     main.classList.add('menu');

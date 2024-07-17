@@ -1,5 +1,13 @@
 export default function renderHome() {
     const main = document.querySelector('#content');
+    // Button Background toggle
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        button.classList.remove('toggled');
+    });
+    const Btn = document.querySelector('#home');
+    Btn.classList.add('toggled');
+    
     main.innerHTML = '';
     main.className = ''; // Remove all existing classes
     main.classList.add('home');

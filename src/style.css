@@ -40,6 +40,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow-x: hidden; /* We'll have to use x since the axis has been reversed by body's flex direction*/
+    font-family: 'Roboto';
 }
 
 h1 {
@@ -62,6 +63,10 @@ p {
     padding: 0;
     font-size: 16px;
     line-height: 22px;
+}
+
+li {
+    margin-bottom: 10px;
 }
 
 #header {
@@ -113,10 +118,12 @@ p {
     border: none;
     color: var(--text-color);
     background-color: transparent;
-    font-size: 14px;
+    font-size: 16px;
+    letter-spacing: 1px;
     height: 100%;
     width: 75px;
     text-align: center;
+    font-family: 'Lobster';
 }
 
 #navPanel > button:hover {
@@ -126,6 +133,10 @@ p {
 
 #navPanel > button:active {
     opacity: .5;
+}
+
+#navPanel > button.toggled {
+    background-color: var(--background-color);
 }
 
 #content {
@@ -146,6 +157,15 @@ p {
     height: auto;
     align-self: flex-start;
     margin-left: 50px;
+}
+
+#content.home p::first-letter {
+    font-family: 'Lobster';
+    font-size: 35px;
+}
+
+#content.home p:last-child {
+    margin-bottom: 0;
 }
 
 #content.menu {
@@ -169,8 +189,7 @@ p {
 }
 
 #content.menu .menu-category ul > li {
-    /* border: 1px solid red; */
-    margin-bottom: 5px;
+    font-size: 14px;
 }
 
 #content.contact {
@@ -182,6 +201,12 @@ p {
 
 #content.about {
     width: 700px;
+}
+
+strong {
+    font-family: 'Lobster';
+    letter-spacing: 2px;
+    font-size: 20px;
 }
 
 #footer {
